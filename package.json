@@ -1,0 +1,33 @@
+{
+  "name": "api-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handlers/APIService.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.10.5",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/register": "^7.10.5",
+    "babel-loader": "^8.1.0",
+    "dotenv": "^8.2.0",
+    "eslint": "^7.5.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "jest": "^26.1.0",
+    "serverless-dotenv-plugin": "^2.4.2",
+    "serverless-offline": "^6.5.0",
+    "serverless-pseudo-parameters": "^2.5.0",
+    "serverless-webpack": "^5.3.5",
+    "webpack": "^4.43.0",
+    "webpack-node-externals": "^2.5.0"
+  },
+  "scripts": {
+    "dev": "sls offline",
+    "test": "jest",
+    "deploy:dev": "serverless deploy --verbose --stage development --r eu-west-1",
+    "deploy:prod": "serverless deploy --verbose --stage production --r eu-west-1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

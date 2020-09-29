@@ -1,0 +1,33 @@
+
+service: api-service
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: ${opt:stage, 'development'}
+  region: ${opt:region, 'eu-west-1'}
+  versionFunctions: false
+
+plugins:
+  - serverless-webpack
+  - serverless-dotenv-plugin
+  - serverless-pseudo-parameters
+  - serverless-offline 
+
+custom:
+  webpack:
+    webpackConfig: ./webpack.config.js
+    includeModules: true
+  serverless-offline:
+    port: ${env:OFFLINE_PORT, 3000}
+
+package:
+  individually: true
+
+functions:
+  Sessions:
+    handler: handlers/APIService.run
+    role: <ARN_HERE>
+    events:
+      - http:
+          path: 'poop-test/'
+          method: 'get' 
