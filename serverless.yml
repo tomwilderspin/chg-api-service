@@ -27,7 +27,9 @@ functions:
   Sessions:
     handler: handlers/APIService.run
     role: <ARN_HERE>
+    environment:
+      CH_API_SECRET: ${env:CH_API_SECRET, 'abcdef123456'}
     events:
       - http:
-          path: 'poop-test/'
+          path: 'search/companies'
           method: 'get' 
