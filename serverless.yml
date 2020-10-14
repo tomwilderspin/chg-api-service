@@ -32,4 +32,7 @@ functions:
     events:
       - http:
           path: 'search/companies'
-          method: 'get' 
+          method: 'get'
+      - http:
+          path: 'search/officers'
+          method: 'get'

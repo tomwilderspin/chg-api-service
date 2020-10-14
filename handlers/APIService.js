@@ -1,7 +1,8 @@
-import { companySearch } from '../lib/Controller/Search';
+import { companySearch, officerSearch } from '../lib/Controller/Search';
 
 const RouteControllers = {
   '/search/companies': { GET: companySearch },
+  '/search/officers': { GET: officerSearch },
 };
 
 function routeEvent(router = {}) {

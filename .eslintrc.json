@@ -1,4 +1,5 @@
 {
+    "parser": "babel-eslint",
     "env": {
         "es2020": true,
         "node": true
@@ -11,6 +12,8 @@
         "sourceType": "module"
     },
     "rules": {
-        "arrow-parens": "off"
+        "arrow-parens": "off",
+        "no-console": "off",
+        "no-use-before-define": "off"
     }
 }
